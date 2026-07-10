@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Icon from "../components/Icon";
 import { CITIES } from "../lib/cities";

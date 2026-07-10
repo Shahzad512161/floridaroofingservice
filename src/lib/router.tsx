@@ -1,32 +1,25 @@
-import React, { useState, useEffect } from "react";
+"use client";
 
-// Native navigation helper that updates history and dispatches popstate
+import React from "react";
+import NextLink from "next/link";
+import { usePathname } from "next/navigation";
+
+// Navigation helper that updates history/location
 export function navigateTo(path: string) {
   if (typeof window !== "undefined") {
-    window.history.pushState({}, "", path);
-    window.dispatchEvent(new PopStateEvent("popstate"));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // If the user navigates programmatically, we can use location change or history
+    window.location.href = path;
   }
 }
 
-// Hook to track current URL path and trigger re-renders
+// Hook to track current URL path and trigger re-renders in client components
 export function useCurrentPath() {
-  const [path, setPath] = useState(
-    typeof window !== "undefined" ? window.location.pathname : "/"
-  );
-
-  useEffect(() => {
-    const handlePopState = () => {
-      setPath(window.location.pathname);
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
-  }, []);
-
-  return path;
+  try {
+    const pathname = usePathname();
+    return pathname || "/";
+  } catch (e) {
+    return "/";
+  }
 }
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -36,18 +29,12 @@ interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   key?: string | number;
 }
 
-// SEO-friendly Link component that intercepts clicks for SPA routing
+// SEO-friendly Link component mapping to Next.js Link
 export function Link({ href, children, className = "", ...props }: LinkProps) {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!e.defaultPrevented && e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
-      e.preventDefault();
-      navigateTo(href);
-    }
-  };
-
   return (
-    <a href={href} onClick={handleClick} className={className} {...props}>
+    <NextLink href={href} className={className} {...props}>
       {children}
-    </a>
+    </NextLink>
   );
 }
+

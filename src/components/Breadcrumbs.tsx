@@ -1,15 +1,15 @@
+"use client";
+
 import React from "react";
 import { Link } from "../lib/router";
+import { usePathname } from "next/navigation";
 import Icon from "./Icon";
 
-interface BreadcrumbsProps {
-  path: string;
-}
+export default function Breadcrumbs() {
+  const pathname = usePathname();
+  const segments = (pathname || "").split("/").filter(Boolean);
 
-export default function Breadcrumbs({ path }: BreadcrumbsProps) {
-  const segments = path.split("/").filter(Boolean);
-
-  if (segments.length === 0) {
+  if (segments.length === 0 || pathname === "/") {
     return null;
   }
 

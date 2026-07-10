@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { Link, useCurrentPath } from "../lib/router";
 import Icon from "./Icon";
