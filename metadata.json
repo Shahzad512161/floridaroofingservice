@@ -1,0 +1,6 @@
+{
+  "name": "MWAI Architects",
+  "description": "Professional architecture and roofing services in Winter Park, Orlando, and across Florida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
