@@ -204,6 +204,7 @@ export default function Home() {
                 advantages={type.advantages}
                 bestFor={type.bestFor}
                 icon={type.iconName}
+                imageUrl={type.imageUrl}
               />
             ))}
           </div>

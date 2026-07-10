@@ -19,41 +19,10 @@ export default function Header() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    {
-      label: "Architecture",
-      href: "/architecture",
-      dropdown: [
-        { label: "Overview", href: "/architecture" },
-        { label: "Residential", href: "/architecture/residential" },
-        { label: "Commercial", href: "/architecture/commercial" },
-        { label: "Interior Design", href: "/architecture/interior-design" }
-      ]
-    },
-    {
-      label: "Roofing",
-      href: "/roofing",
-      dropdown: [
-        { label: "Overview", href: "/roofing" },
-        { label: "Installation", href: "/roofing/installation" },
-        { label: "Leak Detection & Repair", href: "/roofing/repair" },
-        { label: "Replacement", href: "/roofing/replacement" },
-        { label: "Inspection", href: "/roofing/inspection" }
-      ]
-    },
-    {
-      label: "Roofing Types",
-      href: "#",
-      dropdown: [
-        { label: "Asphalt Shingle", href: "/roofing/shingle" },
-        { label: "Clay & Concrete Tile", href: "/roofing/tile" },
-        { label: "Standing Seam Metal", href: "/roofing/metal" },
-        { label: "Engineered Flat", href: "/roofing/flat" },
-        { label: "Premium Natural Slate", href: "/roofing/slate" },
-        { label: "Traditional Wood Shake", href: "/roofing/wood-shake" }
-      ]
-    },
-    { label: "Projects", href: "/projects" },
     { label: "About", href: "/about" },
+    { label: "Architecture", href: "/architecture" },
+    { label: "Roofing", href: "/roofing" },
+    { label: "Projects", href: "/projects" },
     { label: "Service Areas", href: "/service-areas" },
     { label: "Contact", href: "/contact" }
   ];
@@ -79,66 +48,20 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
           {navLinks.map((link) => {
-            const hasDropdown = !!link.dropdown;
-            const isActive = link.href === "/" ? currentPath === "/" : currentPath.startsWith(link.href) && link.href !== "#";
+            const isActive = link.href === "/" ? currentPath === "/" : currentPath.startsWith(link.href);
 
             return (
-              <div
-                key={link.label}
-                className="relative group py-2"
-                onMouseEnter={() => hasDropdown && setActiveDropdown(link.label)}
-                onMouseLeave={() => hasDropdown && setActiveDropdown(null)}
-              >
-                {hasDropdown ? (
-                  <button
-                    className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors cursor-pointer ${
-                      isActive ? "text-[#c49b3b]" : "text-gray-700 hover:text-[#1a2a3a] hover:bg-gray-50"
-                    }`}
-                  >
-                    {link.label}
-                    <Icon name="ChevronDown" className="h-4 w-4 opacity-70 group-hover:rotate-180 transition-transform" />
-                  </button>
-                ) : (
-                  <Link
-                    href={link.href}
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      isActive ? "text-[#c49b3b] font-semibold" : "text-gray-700 hover:text-[#1a2a3a] hover:bg-gray-50"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                )}
-
-                {/* Dropdown Menu */}
-                {hasDropdown && link.dropdown && (
-                  <div
-                    className={`absolute left-0 mt-1 w-64 rounded-xl border border-gray-100 bg-white p-2 shadow-xl transition-all duration-200 origin-top ${
-                      activeDropdown === link.label
-                        ? "opacity-100 scale-100 pointer-events-auto"
-                        : "opacity-0 scale-95 pointer-events-none"
-                    }`}
-                  >
-                    <div className="grid gap-1">
-                      {link.dropdown.map((sub) => {
-                        const isSubActive = currentPath === sub.href;
-                        return (
-                          <Link
-                            key={sub.label}
-                            href={sub.href}
-                            className={`flex items-center justify-between rounded-lg px-4 py-2.5 text-sm transition-colors ${
-                              isSubActive
-                                ? "bg-[#fcf8f0] text-[#c49b3b] font-medium"
-                                : "text-gray-600 hover:bg-gray-50 hover:text-[#1a2a3a]"
-                            }`}
-                          >
-                            <span>{sub.label}</span>
-                            {isSubActive && <div className="h-1.5 w-1.5 rounded-full bg-[#c49b3b]" />}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
+              <div key={link.label} className="relative py-2">
+                <Link
+                  href={link.href}
+                  className={`px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors rounded-md ${
+                    isActive 
+                      ? "text-[#c49b3b] bg-gray-50/50" 
+                      : "text-gray-600 hover:text-[#1a2a3a] hover:bg-gray-50"
+                  }`}
+                >
+                  {link.label}
+                </Link>
               </div>
             );
           })}
@@ -148,10 +71,10 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href="tel:+17026029336"
-            className="flex items-center gap-2 rounded-lg bg-[#1a2a3a] px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#2c3e50] active:scale-95 transition-all text-center border border-[#c49b3b]/30"
+            className="flex items-center gap-2 rounded-lg bg-[#1a2a3a] px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md hover:bg-[#2c3e50] active:scale-95 transition-all text-center border border-[#c49b3b]/30"
           >
-            <Icon name="Phone" className="h-4 w-4 text-[#c49b3b]" />
-            <span>Call: (702) 602-9336</span>
+            <Icon name="Phone" className="h-3.5 w-3.5 text-[#c49b3b]" />
+            <span>(702) 602-9336</span>
           </a>
         </div>
 
@@ -170,52 +93,18 @@ export default function Header() {
         <div className="lg:hidden border-t border-gray-100 bg-white shadow-inner max-h-[calc(100vh-5rem)] overflow-y-auto">
           <div className="space-y-1 p-4">
             {navLinks.map((link) => {
-              const hasDropdown = !!link.dropdown;
-              const isDropdownActive = activeDropdown === link.label;
-              const isActive = link.href === "/" ? currentPath === "/" : currentPath.startsWith(link.href) && link.href !== "#";
+              const isActive = link.href === "/" ? currentPath === "/" : currentPath.startsWith(link.href);
 
               return (
                 <div key={link.label} className="border-b border-gray-50 last:border-0 py-1">
-                  {hasDropdown ? (
-                    <div>
-                      <button
-                        onClick={() => toggleDropdown(link.label)}
-                        className="flex w-full items-center justify-between py-2 text-base font-semibold text-gray-800"
-                      >
-                        <span className={isActive ? "text-[#c49b3b]" : ""}>{link.label}</span>
-                        <Icon
-                          name="ChevronDown"
-                          className={`h-4 w-4 transition-transform duration-200 ${isDropdownActive ? "rotate-180 text-[#c49b3b]" : "text-gray-400"}`}
-                        />
-                      </button>
-                      {isDropdownActive && link.dropdown && (
-                        <div className="mt-1 ml-4 border-l border-gray-100 pl-4 space-y-1 py-1">
-                          {link.dropdown.map((sub) => (
-                            <Link
-                              key={sub.label}
-                              href={sub.href}
-                              className={`block py-2 text-sm rounded-md transition-colors ${
-                                currentPath === sub.href
-                                  ? "text-[#c49b3b] font-semibold"
-                                  : "text-gray-600 hover:text-[#1a2a3a]"
-                              }`}
-                            >
-                              {sub.label}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className={`block py-2 text-base font-semibold transition-colors ${
-                        isActive ? "text-[#c49b3b]" : "text-gray-800 hover:text-[#1a2a3a]"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  )}
+                  <Link
+                    href={link.href}
+                    className={`block py-2.5 text-sm font-bold uppercase tracking-wider transition-colors ${
+                      isActive ? "text-[#c49b3b]" : "text-gray-800 hover:text-[#1a2a3a]"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
                 </div>
               );
             })}
@@ -223,9 +112,9 @@ export default function Header() {
             <div className="pt-4 pb-2">
               <a
                 href="tel:+17026029336"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#1a2a3a] py-3.5 text-base font-bold text-white shadow-md border border-[#c49b3b]/30"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#1a2a3a] py-3 text-sm font-bold uppercase tracking-wider text-white shadow-md border border-[#c49b3b]/30"
               >
-                <Icon name="Phone" className="h-5 w-5 text-[#c49b3b]" />
+                <Icon name="Phone" className="h-4 w-4 text-[#c49b3b]" />
                 <span>Call: (702) 602-9336</span>
               </a>
               <div className="mt-3 text-center text-xs text-gray-400">

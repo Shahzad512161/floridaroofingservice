@@ -6,6 +6,7 @@ export interface ServiceDetail {
   features: string[];
   process: string[];
   iconName: string;
+  imageUrl: string;
   subType?: string;
 }
 
@@ -18,6 +19,7 @@ export interface RoofingType {
   materialsUsed: string[];
   bestFor: string;
   iconName: string;
+  imageUrl: string;
 }
 
 export const ARCHITECTURE_SERVICES: ServiceDetail[] = [
@@ -41,7 +43,8 @@ export const ARCHITECTURE_SERVICES: ServiceDetail[] = [
       "Permit Drawings & Engineering Coordination",
       "Construction Oversight & Architect Liaison Services"
     ],
-    iconName: "Home"
+    iconName: "Home",
+    imageUrl: "/src/assets/images/hero_architecture_banner_1783704942154.jpg"
   },
   {
     id: "commercial",
@@ -63,7 +66,8 @@ export const ARCHITECTURE_SERVICES: ServiceDetail[] = [
       "Zoning Approvals & Code Compliance Filing",
       "Construction Administration & Regular Progress Inspections"
     ],
-    iconName: "Building2"
+    iconName: "Building2",
+    imageUrl: "/src/assets/images/flat_tpo_roof_1783707454621.jpg"
   },
   {
     id: "interior-design",
@@ -84,7 +88,8 @@ export const ARCHITECTURE_SERVICES: ServiceDetail[] = [
       "Finish Specifying & Comprehensive Schedules Listing",
       "Installation Quality Monitoring & Finishes Coordination"
     ],
-    iconName: "Sparkles"
+    iconName: "Sparkles",
+    imageUrl: "/src/assets/images/hero_architecture_banner_1783704942154.jpg"
   }
 ];
 
@@ -109,7 +114,8 @@ export const ROOFING_SERVICES: ServiceDetail[] = [
       "Ridge Ventilation and Soffit Integration Verification",
       "Final Code Inspection & Independent Seal Certification"
     ],
-    iconName: "Layers"
+    iconName: "Layers",
+    imageUrl: "/src/assets/images/asphalt_shingles_roof_1783707403984.jpg"
   },
   {
     id: "repair",
@@ -131,7 +137,8 @@ export const ROOFING_SERVICES: ServiceDetail[] = [
       "Moisture-Seal Underlayment Restructuring",
       "Outer Shingle/Tile Interlocking & Final Water-Seal Testing"
     ],
-    iconName: "Wrench"
+    iconName: "Wrench",
+    imageUrl: "/src/assets/images/hero_roofing_banner_1783704958991.jpg"
   },
   {
     id: "replacement",
@@ -154,7 +161,8 @@ export const ROOFING_SERVICES: ServiceDetail[] = [
       "Primary Material Fastening & Quality Flashing Setup",
       "Comprehensive Ground Cleanup & Site Clearing"
     ],
-    iconName: "Shield"
+    iconName: "Shield",
+    imageUrl: "/src/assets/images/clay_tile_roof_1783707420890.jpg"
   },
   {
     id: "inspection",
@@ -175,7 +183,8 @@ export const ROOFING_SERVICES: ServiceDetail[] = [
       "Attic Inter-Structure Water Intrusion Inspection",
       "Data Evaluation & Formal Architect-Signed Report Generation"
     ],
-    iconName: "Clipboard"
+    iconName: "Clipboard",
+    imageUrl: "/src/assets/images/hero_roofing_banner_1783704958991.jpg"
   }
 ];
 
@@ -198,7 +207,8 @@ export const ROOFING_TYPES: RoofingType[] = [
       "Peel-and-Stick SBS Modified Asphalt Underlayment"
     ],
     bestFor: "Residential properties seeking versatile, cost-effective, storm-resilient aesthetic options.",
-    iconName: "Grid"
+    iconName: "Grid",
+    imageUrl: "/src/assets/images/asphalt_shingles_roof_1783707403984.jpg"
   },
   {
     id: "tile",
@@ -218,7 +228,8 @@ export const ROOFING_TYPES: RoofingType[] = [
       "Double-Layer Heavyweight Self-Adhering Underlayment"
     ],
     bestFor: "Luxury Mediterranean, Spanish Revival, or high-wind coastal residential architecture.",
-    iconName: "Home"
+    iconName: "Home",
+    imageUrl: "/src/assets/images/clay_tile_roof_1783707420890.jpg"
   },
   {
     id: "metal",
@@ -238,7 +249,8 @@ export const ROOFING_TYPES: RoofingType[] = [
       "Butyl In-Seam Sealants and Structural Anchoring Clips"
     ],
     bestFor: "Modern architectural designs, coastal homes, and structures requiring maximum storm-wind resilience.",
-    iconName: "Layers"
+    iconName: "Layers",
+    imageUrl: "/src/assets/images/standing_seam_metal_roof_1783707435847.jpg"
   },
   {
     id: "flat",
@@ -258,7 +270,8 @@ export const ROOFING_TYPES: RoofingType[] = [
       "Polyisocyanurate (Polyiso) Rigid Foam Insulation Boards"
     ],
     bestFor: "Ultra-modern flat-roof homes, commercial complexes, and low-slope roof portions.",
-    iconName: "Square"
+    iconName: "Square",
+    imageUrl: "/src/assets/images/flat_tpo_roof_1783707454621.jpg"
   },
   {
     id: "slate",
@@ -278,7 +291,8 @@ export const ROOFING_TYPES: RoofingType[] = [
       "Thick High-Durability Engineered Asphalt Felt Sub-layers"
     ],
     bestFor: "High-end luxury estates, traditional European layouts, and generational heritage homes.",
-    iconName: "Sliders"
+    iconName: "Sliders",
+    imageUrl: "/src/assets/images/natural_slate_roof_1783707472429.jpg"
   },
   {
     id: "wood-shake",
@@ -298,6 +312,7 @@ export const ROOFING_TYPES: RoofingType[] = [
       "Breathable Vapor-Permeable Synthetic Underlayments"
     ],
     bestFor: "Rustic high-end craftsman style homes, traditional Florida ranches, and historic restorations.",
-    iconName: "Tree"
+    iconName: "Tree",
+    imageUrl: "/src/assets/images/cedar_wood_shake_roof_1783707490114.jpg"
   }
 ];

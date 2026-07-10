@@ -34,49 +34,56 @@ export default function Footer() {
 
       {/* Main Grid */}
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Column 1: Company Profile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
+          {/* Column 1: Company Profile & Contacts */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-2">
               <span className="font-sans text-2xl font-bold tracking-tight text-white">MWAI <span className="text-[#c49b3b]">Architects</span></span>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed max-w-md">
+            <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
               A premium, architecture-led design and roofing contractor. We deliver custom residential designs, commercial building planning, and high-performance, hurricane-rated roofing systems engineered for Florida's coastal and inland environments.
             </p>
+            <div className="space-y-3 text-sm text-gray-400">
+              <p className="flex items-start gap-2">
+                <Icon name="MapPin" className="h-4 w-4 text-[#c49b3b] shrink-0 mt-0.5" />
+                <span>U K Cir, Winter Park, FL 32792</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Icon name="Phone" className="h-4 w-4 text-[#c49b3b] shrink-0" />
+                <a href="tel:+17026029336" className="hover:text-white transition-colors">+1 (702) 602-9336</a>
+              </p>
+              <p className="flex items-center gap-2">
+                <Icon name="Mail" className="h-4 w-4 text-[#c49b3b] shrink-0" />
+                <a href="mailto:info@mwaiarchitects.com" className="hover:text-white transition-colors break-all">info@mwaiarchitects.com</a>
+              </p>
+            </div>
             <div className="flex items-center gap-3">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-[#c49b3b] hover:bg-white/10 transition-colors"
+                className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-[#c49b3b] hover:bg-white/10 transition-colors"
                 aria-label="Facebook"
               >
-                <Icon name="Facebook" className="h-5 w-5" />
+                <Icon name="Facebook" className="h-4 w-4" />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-[#c49b3b] hover:bg-white/10 transition-colors"
+                className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-[#c49b3b] hover:bg-white/10 transition-colors"
                 aria-label="Instagram"
               >
-                <Icon name="Instagram" className="h-5 w-5" />
+                <Icon name="Instagram" className="h-4 w-4" />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-[#c49b3b] hover:bg-white/10 transition-colors"
+                className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-[#c49b3b] hover:bg-white/10 transition-colors"
                 aria-label="LinkedIn"
               >
-                <Icon name="Linkedin" className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:info@mwaiarchitects.com"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-[#c49b3b] hover:bg-white/10 transition-colors"
-                aria-label="Email Us"
-              >
-                <Icon name="Mail" className="h-5 w-5" />
+                <Icon name="Linkedin" className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -86,7 +93,7 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-800 pb-3 mb-4">
               Navigation
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-xs font-medium">
               <li>
                 <Link href="/" className="hover:text-white transition-colors flex items-center gap-1.5 group">
                   <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -102,7 +109,7 @@ export default function Footer() {
               <li>
                 <Link href="/projects" className="hover:text-white transition-colors flex items-center gap-1.5 group">
                   <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span>Projects Portfolio</span>
+                  <span>Projects</span>
                 </Link>
               </li>
               <li>
@@ -120,74 +127,119 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Services */}
+          {/* Column 3: Architecture Services */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-800 pb-3 mb-4">
-              Our Services
+              Architecture
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-xs font-medium">
               <li>
                 <Link href="/architecture" className="hover:text-white transition-colors flex items-center gap-1.5 group">
                   <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span>Architecture Core</span>
+                  <span>Overview</span>
                 </Link>
               </li>
               <li>
                 <Link href="/architecture/residential" className="hover:text-white transition-colors flex items-center gap-1.5 group">
                   <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span>Residential Architecture</span>
+                  <span>Residential</span>
                 </Link>
               </li>
               <li>
                 <Link href="/architecture/commercial" className="hover:text-white transition-colors flex items-center gap-1.5 group">
                   <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span>Commercial Architecture</span>
+                  <span>Commercial</span>
                 </Link>
               </li>
               <li>
-                <Link href="/roofing" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                <Link href="/architecture/interior-design" className="hover:text-white transition-colors flex items-center gap-1.5 group">
                   <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span>Roofing Services</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/roofing/replacement" className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span>Roof Replacement</span>
+                  <span>Interior Design</span>
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Contact & Hours */}
+          {/* Column 4: Roofing Services */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-800 pb-3 mb-4">
-              Get in Touch
+              Roofing
             </h4>
-            <ul className="space-y-3.5 text-sm text-gray-400">
-              <li className="flex items-start gap-2.5">
-                <Icon name="MapPin" className="h-5 w-5 text-[#c49b3b] shrink-0 mt-0.5" />
-                <span>
-                  U K Cir, <br />
-                  Winter Park, FL 32792
-                </span>
+            <ul className="space-y-2.5 text-xs font-medium">
+              <li>
+                <Link href="/roofing" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Overview</span>
+                </Link>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Icon name="Phone" className="h-4 w-4 text-[#c49b3b]" />
-                <a href="tel:+17026029336" className="hover:text-white transition-colors">
-                  +1 (702) 602-9336
-                </a>
+              <li>
+                <Link href="/roofing/installation" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Installation</span>
+                </Link>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Icon name="Mail" className="h-4 w-4 text-[#c49b3b]" />
-                <a href="mailto:info@mwaiarchitects.com" className="hover:text-white transition-colors break-all">
-                  info@mwaiarchitects.com
-                </a>
+              <li>
+                <Link href="/roofing/repair" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Leak Repair</span>
+                </Link>
               </li>
-              <li className="border-t border-gray-800 pt-3 mt-3">
-                <span className="block text-xs font-semibold text-gray-300 uppercase tracking-widest mb-1.5">Hours:</span>
-                <span className="block text-xs">Monday - Friday: 8am - 6pm</span>
-                <span className="block text-xs">Saturday - Sunday: Closed</span>
+              <li>
+                <Link href="/roofing/replacement" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Replacement</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/roofing/inspection" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Inspection</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 5: Roofing Types */}
+          <div>
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-800 pb-3 mb-4">
+              Roof Types
+            </h4>
+            <ul className="space-y-2.5 text-xs font-medium">
+              <li>
+                <Link href="/roofing/shingle" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Asphalt Shingle</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/roofing/tile" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Clay & Tile</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/roofing/metal" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Standing Metal</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/roofing/flat" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Engineered Flat</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/roofing/slate" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Natural Slate</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/roofing/wood-shake" className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <Icon name="ArrowRight" className="h-3 w-3 text-[#c49b3b] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span>Wood Shake</span>
+                </Link>
               </li>
             </ul>
           </div>

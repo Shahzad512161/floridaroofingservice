@@ -48,6 +48,26 @@ export default function RoofingTypeSub({ id }: RoofingTypeSubProps) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Main column */}
           <div className="lg:col-span-8 space-y-8">
+            {/* Roofing Type Feature Image */}
+            <div className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden shadow-md border border-gray-100 relative group bg-gray-50">
+              <img
+                src={type.imageUrl}
+                alt={type.title}
+                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a2a3a]/40 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span className="text-[10px] font-mono tracking-widest text-white uppercase bg-[#c49b3b] px-2.5 py-1 rounded-md font-bold">
+                  MWAI Material Standard
+                </span>
+                <span className="text-xs font-bold text-white drop-shadow-sm font-sans flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  Sourced & Approved
+                </span>
+              </div>
+            </div>
+
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-[#1a2a3a]">
                 Material Profile & Architectural Use
