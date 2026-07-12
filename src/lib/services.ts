@@ -115,7 +115,7 @@ export const ROOFING_SERVICES: ServiceDetail[] = [
       "Final Code Inspection & Independent Seal Certification"
     ],
     iconName: "Layers",
-    imageUrl: "/src/assets/images/asphalt_shingles_roof_1783707403984.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U2NvcGUlMjBvZiUyMFJvb2ZpbmclMjBPcGVyYXRpb25zfGVufDB8fDB8fHww"
   },
   {
     id: "repair",
@@ -138,7 +138,7 @@ export const ROOFING_SERVICES: ServiceDetail[] = [
       "Outer Shingle/Tile Interlocking & Final Water-Seal Testing"
     ],
     iconName: "Wrench",
-    imageUrl: "/src/assets/images/hero_roofing_banner_1783704958991.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U2NvcGUlMjBvZiUyMFJvb2ZpbmclMjBPcGVyYXRpb25zfGVufDB8fDB8fHww"
   },
   {
     id: "replacement",
@@ -162,7 +162,7 @@ export const ROOFING_SERVICES: ServiceDetail[] = [
       "Comprehensive Ground Cleanup & Site Clearing"
     ],
     iconName: "Shield",
-    imageUrl: "/src/assets/images/clay_tile_roof_1783707420890.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U2NvcGUlMjBvZiUyMFJvb2ZpbmclMjBPcGVyYXRpb25zfGVufDB8fDB8fHww"
   },
   {
     id: "inspection",
@@ -184,7 +184,7 @@ export const ROOFING_SERVICES: ServiceDetail[] = [
       "Data Evaluation & Formal Architect-Signed Report Generation"
     ],
     iconName: "Clipboard",
-    imageUrl: "/src/assets/images/hero_roofing_banner_1783704958991.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U2NvcGUlMjBvZiUyMFJvb2ZpbmclMjBPcGVyYXRpb25zfGVufDB8fDB8fHww"
   }
 ];
 
@@ -208,7 +208,7 @@ export const ROOFING_TYPES: RoofingType[] = [
     ],
     bestFor: "Residential properties seeking versatile, cost-effective, storm-resilient aesthetic options.",
     iconName: "Grid",
-    imageUrl: "/src/assets/images/asphalt_shingles_roof_1783707403984.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1590365876016-da05ac533e83?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXNwaGFsdCUyMFNoaW5nbGUlMjBSb29maW5nfGVufDB8fDB8fHww"
   },
   {
     id: "tile",
@@ -229,7 +229,7 @@ export const ROOFING_TYPES: RoofingType[] = [
     ],
     bestFor: "Luxury Mediterranean, Spanish Revival, or high-wind coastal residential architecture.",
     iconName: "Home",
-    imageUrl: "/src/assets/images/clay_tile_roof_1783707420890.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2xheSUyMCUyNiUyMENvbmNyZXRlJTIwVGlsZSUyMFJvb2Zpbmd8ZW58MHx8MHx8fDA%3D"
   },
   {
     id: "metal",
@@ -250,7 +250,7 @@ export const ROOFING_TYPES: RoofingType[] = [
     ],
     bestFor: "Modern architectural designs, coastal homes, and structures requiring maximum storm-wind resilience.",
     iconName: "Layers",
-    imageUrl: "/src/assets/images/standing_seam_metal_roof_1783707435847.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1602193230480-7840a38eb0c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3RhbmRpbmclMjBTZWFtJTIwTWV0YWwlMjBSb29maW5nfGVufDB8fDB8fHww"
   },
   {
     id: "flat",
@@ -271,7 +271,7 @@ export const ROOFING_TYPES: RoofingType[] = [
     ],
     bestFor: "Ultra-modern flat-roof homes, commercial complexes, and low-slope roof portions.",
     iconName: "Square",
-    imageUrl: "/src/assets/images/flat_tpo_roof_1783707454621.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1746350958044-c755293ecd29?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RW5naW5lZXJlZCUyMEZsYXQlMjBSb29maW5nfGVufDB8fDB8fHww"
   },
   {
     id: "slate",
@@ -292,7 +292,7 @@ export const ROOFING_TYPES: RoofingType[] = [
     ],
     bestFor: "High-end luxury estates, traditional European layouts, and generational heritage homes.",
     iconName: "Sliders",
-    imageUrl: "/src/assets/images/natural_slate_roof_1783707472429.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1643167607679-82d566645b0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEVuZ2luZWVyZWQlMjBGbGF0JTIwUm9vZmluZ3xlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     id: "wood-shake",
@@ -313,6 +313,6 @@ export const ROOFING_TYPES: RoofingType[] = [
     ],
     bestFor: "Rustic high-end craftsman style homes, traditional Florida ranches, and historic restorations.",
     iconName: "Tree",
-    imageUrl: "/src/assets/images/cedar_wood_shake_roof_1783707490114.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1716175005414-cc86be72ed82?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VHJhZGl0aW9uYWwlMjBXb29kJTIwU2hha2UlMjBSb29maW5nfGVufDB8fDB8fHww"
   }
 ];

@@ -13,6 +13,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "MWAI Architects & Roof Engineering",
   description: "Professional architecture and premium roofing services in Winter Park, Orlando, and across Florida.",
+verification: {
+    google: 'KzYaUOuWN6upxuyNGzww_WF8Zv7JPnFkkDJ', // Paste the code Google gives you here
+  },
+
 };
 
 export default function RootLayout({
